@@ -1,0 +1,371 @@
+@import "init.scss";
+
+.wrapper {
+    padding: 40px;
+    @media (min-width: $tab) {
+        padding: 70px 100px;
+    }
+    @media (min-width: $ldesk) {
+        padding: 100px 150px;
+    }
+    @media (min-width: $sdesk) {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .game-area {
+        @media (min-width: $sdesk) {
+            display: flex;
+            width: 100%;
+        } 
+        .hangman {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+            @media (min-width: $sdesk) {
+                width: 50%;
+                margin: 0;
+            } 
+            svg {
+                max-width: 50%;
+                height: auto;
+                @media (min-width: $stab) {
+                    max-width: 30%;
+                }
+                @media (min-width: $tab) {
+                    max-width: 40%;
+                }
+                @media (min-width: $sdesk) {
+                    width: 200px;
+                } 
+                @media (min-width: $ldesk) {
+                    width: 320px;
+                }
+                .body-part {
+                    opacity: 0;
+                }
+            }
+        }
+        .wrong-letters {
+            margin-bottom: 60px;
+            @media (min-width: $tab) {
+                margin-bottom: 80px;
+            } 
+            @media (min-width: $sdesk) {
+                width: 50%;
+                margin: 0;
+            } 
+            .letters-list {
+                list-style: none;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-wrap: wrap;
+                .wrong-letter {
+                    color: $red;
+                    text-decoration: line-through;
+                    font-size: 2em;
+                    margin-right: 0.5em;
+                    @media (min-width: $tab) {
+                        font-size: 2.25em;
+                    }
+                    @media (min-width: $mdesk) {
+                        font-size: 2.5em;
+                    }
+                    @media (min-width: $ldesk) {
+                        font-size: 2.75em;
+                    }
+                    &:last-of-type {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+    .word {
+        margin-bottom: 60px;
+        @media (min-width: $tab) {
+            margin-bottom: 80px;
+        }
+        @media (min-width: $sdesk) {
+            margin: 0;
+        }
+        .word-list {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            .word-letter {
+                position: relative;
+                font-size: 2em;
+                padding: 0.2em 0.5em;     
+                margin-right: 0.5em;
+                margin-bottom: 1em;
+                @media (min-width: $tab) {
+                    font-size: 2.25em;
+                }
+                @media (min-width: $mdesk) {
+                    font-size: 2.5em;
+                }
+                @media (min-width: $ldesk) {
+                    font-size: 2.75em;
+                }
+                &:nth-of-type(2n):after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 4px;
+                    background-color: $black;
+                    border-radius: 20px;
+                    transform: rotate(2deg);
+                }
+                &:nth-of-type(2n+1):after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 4px;
+                    background-color: $black;
+                    border-radius: 20px;
+                    transform: rotate(-1deg);
+                }
+                &:nth-of-type(3n):after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 4px;
+                    background-color: $black;
+                    border-radius: 20px;
+                    transform: rotate(0deg);
+                }
+            }
+        }
+    }
+    .screen-keyboard {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @media (min-width: $sdesk) {
+            opacity: 1;
+        }
+        h4 {
+            text-align: center;
+            font-size: 2em;
+            @media (min-width: $tab) {
+                font-size: 2.25em;
+            }
+            @media (min-width: $mdesk) {
+                font-size: 2.5em;
+            }
+            @media (min-width: $ldesk) {
+                font-size: 2.75em;
+            }
+            @media (min-width: $sdesk) {
+                display: none;
+            }
+        }
+        .alphabet-list {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+            .alphabet-letter {
+                position: relative;
+                font-size: 1.75em;
+                padding: 0.2em 0.5em;     
+                cursor: pointer; 
+                @media (min-width: $tab) {
+                    font-size: 2em;
+                }
+                @media (min-width: $mdesk) {
+                    font-size: 2.25em;
+                }
+                @media (min-width: $ldesk) {
+                    font-size: 2.5em;
+                }
+                &:hover:nth-of-type(2n):after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 4px;
+                    background-color: $black;
+                    border-radius: 20px;
+                    transform: rotate(2deg);
+                }
+                &:hover:nth-of-type(2n+1):after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 4px;
+                    background-color: $black;
+                    border-radius: 20px;
+                    transform: rotate(-1deg);
+                }
+                &:hover:nth-of-type(3n):after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 4px;
+                    background-color: $black;
+                    border-radius: 20px;
+                    transform: rotate(0deg);
+                }
+            }
+        }
+    }
+
+    .toggle-keyboard {
+        display: none;
+        position: absolute;
+        bottom: 3%;
+        right: 3%;
+        font-size: 1.5em;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: transparent;
+        @media (min-width: $sdesk) {
+            display: block;
+        }
+    }
+
+    .game-info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100vh;
+        background-color: $background;
+        display: none;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        .line-1 {
+            font-size: 4em;
+            @media (min-width: $tab) {
+                font-size: 6em;
+            }
+            @media (min-width: $sdesk) {
+                font-size: 7em;
+            }
+            @media (min-width: $mdesk) {
+                font-size: 8em;
+            }
+            @media (min-width: $ldesk) {
+                font-size: 9em;
+            }
+        }
+        .line-2 {
+            font-size: 1.5em;
+            @media (min-width: $tab) {
+                font-size: 2em;
+            }
+            @media (min-width: $sdesk) {
+                font-size: 2.25em;
+            }
+            @media (min-width: $mdesk) {
+                font-size: 2.5em;
+            }
+            @media (min-width: $ldesk) {
+                font-size: 2.75em;
+            }
+        }
+    }
+
+    .form-layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100vh;
+        background-color: $background;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: 1.5em;
+        padding: 40px;
+        @media (min-width: $tab) {
+            font-size: 2em;
+            padding: 70px 100px;
+        }
+        @media (min-width: $sdesk) {
+            font-size: 2.25em;
+        }
+        @media (min-width: $mdesk) {
+            font-size: 2.5em;
+        }
+        @media (min-width: $ldesk) {
+            font-size: 2.75em;
+            padding: 100px 150px;
+        }
+        .info-text {
+            margin-bottom: 80px;
+        }
+        .input {
+            border: none;
+            background-color: transparent;
+            font-size: 1em;
+            text-align: center;
+            outline: none;
+            margin-bottom: 30px;
+            &::placeholder {
+                color: $black;
+                font-size: 1em;
+            }
+        }
+        .start-btn {
+            border: none;
+            background-color: transparent;
+            font-size: 1.5em;
+            text-align: center;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+    .countdown-layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100vh;
+        background-color: $background;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        .counter {
+            font-size: 4em;
+            @media (min-width: $tab) {
+                font-size: 6em;
+            }
+            @media (min-width: $sdesk) {
+                font-size: 7em;
+            }
+            @media (min-width: $mdesk) {
+                font-size: 8em;
+            }
+            @media (min-width: $ldesk) {
+                font-size: 9em;
+            }
+        }
+    }
+}

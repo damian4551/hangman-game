@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/game.css">
+    <script src="js/gameDuo.js" defer></script>
+    <title>The Hangman Game</title>
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="countdown-layer">
+            <span class="counter">3</span>
+        </div>
+
+        <div class="form-layer">
+            <p class="info-text">player 1 cames up with the phrase, player 2 tries to guess the phrase</p>
+            <input type="text" class="input" placeholder="type the phrase">
+            <button class="start-btn">start</button>
+        </div>
+
+        <div class="game-info">
+            <span class="line-1">you won!</span>
+            <span class="line-2">reload the page to play again</span>
+        </div>
+
+        <div class="game-area">
+
+            <div class="hangman">
+                <svg xmlns="http://www.w3.org/2000/svg" width="382.326" height="448.726" viewBox="0 0 382.326 448.726">
+                    <g id="hangman" transform="translate(-768.424 -94.948)">
+                      <g id="rack">
+                        <line id="Line_2" data-name="Line 2" x2="259" transform="translate(888.25 540)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="7"/>
+                        <line id="Line_3" data-name="Line 3" x2="22.57" y2="441.378" transform="translate(1005.25 98.622)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="7"/>
+                        <line id="Line_4" data-name="Line 4" x2="158" transform="translate(847.25 98.622)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="7"/>
+                        <line id="Line_5" data-name="Line 5" x1="3" y2="46.5" transform="translate(843.25 99.122)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="7"/>
+                      </g>
+
+                      <g id="head" transform="translate(6.25)" class="body-part">
+                        <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(779 145.5)" fill="none" stroke="#000" stroke-width="7">
+                          <ellipse cx="47" cy="34" rx="47" ry="34" stroke="none"/>
+                          <ellipse cx="47" cy="34" rx="43.5" ry="30.5" fill="none"/>
+                        </g>
+                        <text id="X" transform="translate(803 161.5) rotate(90)" font-size="23" font-family="PatrickHand-Regular, Patrick Hand"><tspan x="0" y="0">X</tspan></text>
+                        <text id="X-2" data-name="X" transform="translate(832 162.5) rotate(90)" font-size="27" font-family="PatrickHand-Regular, Patrick Hand"><tspan x="0" y="0">X</tspan></text>
+                      </g>
+
+                      <line class="body-part" id="spine" x1="5.5" y2="104.378" transform="translate(831.75 210.122)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="7"/>
+                      <line class="body-part" id="arm1" x2="61.75" y2="17.622" transform="translate(772.75 233.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="7"/>
+                      <line class="body-part" id="arm2" x1="57.25" y2="23.622" transform="translate(834.5 225.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="7"/>
+                      <line class="body-part" id="leg1" y1="40" x2="53" transform="translate(777.125 315.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="7"/>
+                      <line class="body-part" id="leg2" x1="25" y1="59" transform="translate(831.75 314.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="7"/>
+                      
+                    </g>
+                  </svg>                  
+            </div>
+
+            <div class="wrong-letters">
+                <ul class="letters-list">
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="word">
+            <ul class="word-list">
+            </ul>
+        </div>
+
+        <div class="screen-keyboard">
+            <h4>Choose the letter</h4>
+            <ul class="alphabet-list">
+                <li class="alphabet-letter">a</li>
+                <li class="alphabet-letter">b</li>
+                <li class="alphabet-letter">c</li>
+                <li class="alphabet-letter">d</li>
+                <li class="alphabet-letter">e</li>
+                <li class="alphabet-letter">f</li>
+                <li class="alphabet-letter">g</li>
+                <li class="alphabet-letter">h</li>
+                <li class="alphabet-letter">i</li>
+                <li class="alphabet-letter">j</li>
+                <li class="alphabet-letter">k</li>
+                <li class="alphabet-letter">l</li>
+                <li class="alphabet-letter">m</li>
+                <li class="alphabet-letter">n</li>
+                <li class="alphabet-letter">o</li>
+                <li class="alphabet-letter">p</li>
+                <li class="alphabet-letter">q</li>
+                <li class="alphabet-letter">r</li>
+                <li class="alphabet-letter">s</li>
+                <li class="alphabet-letter">t</li>
+                <li class="alphabet-letter">u</li>
+                <li class="alphabet-letter">v</li>
+                <li class="alphabet-letter">w</li>
+                <li class="alphabet-letter">x</li>
+                <li class="alphabet-letter">y</li>
+                <li class="alphabet-letter">z</li>
+            </ul>
+        </div>
+        
+        <button class="toggle-keyboard">hide keyboard</button>
+
+    </div>
+</body>
+</html>

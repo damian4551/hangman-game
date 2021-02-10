@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Patrick Hand', cursive;
+  text-transform: uppercase;
+  color: #000;
+}
+
+body {
+  background-color: #FCFAFA;
+}
+
+.wrapper {
+  max-width: 100vw;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 70px 40px;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    padding: 70px 100px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    padding: 70px 130px;
+  }
+}
+
+@media (min-width: 1336px) {
+  .wrapper {
+    padding: 70px 200px;
+  }
+}
+
+@media (min-width: 1680px) {
+  .wrapper {
+    padding: 70px 300px;
+  }
+}
+
+.wrapper .logo {
+  max-width: 450px;
+  margin-bottom: 15vh;
+}
+
+@media (min-width: 1024px) {
+  .wrapper .logo {
+    max-width: 550px;
+  }
+}
+
+@media (min-width: 1680px) {
+  .wrapper .logo {
+    max-width: 700px;
+  }
+}
+
+.wrapper .logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper .menu .menu-list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .menu .menu-list .menu-option {
+  position: relative;
+  font-size: 2em;
+  margin-bottom: 25px;
+}
+
+@media (min-width: 540px) {
+  .wrapper .menu .menu-list .menu-option {
+    font-size: 2.25em;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper .menu .menu-list .menu-option {
+    font-size: 2.5em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper .menu .menu-list .menu-option {
+    font-size: 2.75em;
+  }
+}
+
+@media (min-width: 1680px) {
+  .wrapper .menu .menu-list .menu-option {
+    font-size: 3.25em;
+  }
+}
+
+.wrapper .menu .menu-list .menu-option:hover:first-of-type:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  border-radius: 20px;
+  -webkit-transform: rotate(2deg);
+          transform: rotate(2deg);
+}
+
+.wrapper .menu .menu-list .menu-option:hover:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  border-radius: 20px;
+}
+
+.wrapper .menu .menu-list .menu-option:hover:last-of-type:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  border-radius: 20px;
+  -webkit-transform: rotate(-1deg);
+          transform: rotate(-1deg);
+}
+
+.wrapper .menu .menu-list .menu-option:last-of-type {
+  margin-bottom: 0px;
+}
+
+.wrapper .menu .menu-list .menu-option a {
+  text-decoration: none;
+}
+
+.wrapper .manual {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper .manual .text {
+  font-size: 1em;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+@media (min-width: 1024px) {
+  .wrapper .manual .text {
+    font-size: 1.25em;
+  }
+}
+
+@media (min-width: 1336px) {
+  .wrapper .manual .text {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 1680px) {
+  .wrapper .manual .text {
+    font-size: 2em;
+  }
+}
+/*# sourceMappingURL=menu.css.map */

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="382.326" height="448.726" viewBox="0 0 382.326 448.726">
+  <g id="hangman" transform="translate(-768.424 -94.948)">
+    <g id="rack">
+      <line id="Line_2" data-name="Line 2" x2="259" transform="translate(888.25 540)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="7"/>
+      <line id="Line_3" data-name="Line 3" x2="22.57" y2="441.378" transform="translate(1005.25 98.622)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="7"/>
+      <line id="Line_4" data-name="Line 4" x2="158" transform="translate(847.25 98.622)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="7"/>
+      <line id="Line_5" data-name="Line 5" x1="3" y2="46.5" transform="translate(843.25 99.122)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="7"/>
+    </g>
+    <line id="leg2" x1="25" y1="59" transform="translate(831.75 314.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="7"/>
+    <line id="leg1" y1="40" x2="53" transform="translate(777.125 315.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="7"/>
+    <line id="arm2" x1="57.25" y2="23.622" transform="translate(834.5 225.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="7"/>
+    <line id="arm1" x2="61.75" y2="17.622" transform="translate(772.75 233.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="7"/>
+    <line id="spine" x1="5.5" y2="104.378" transform="translate(831.75 210.122)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="7"/>
+    <g id="head" transform="translate(6.25)">
+      <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(779 145.5)" fill="none" stroke="#000" stroke-width="7">
+        <ellipse cx="47" cy="34" rx="47" ry="34" stroke="none"/>
+        <ellipse cx="47" cy="34" rx="43.5" ry="30.5" fill="none"/>
+      </g>
+      <text id="X" transform="translate(803 161.5) rotate(90)" font-size="23" font-family="PatrickHand-Regular, Patrick Hand"><tspan x="0" y="0">X</tspan></text>
+      <text id="X-2" data-name="X" transform="translate(832 162.5) rotate(90)" font-size="27" font-family="PatrickHand-Regular, Patrick Hand"><tspan x="0" y="0">X</tspan></text>
+    </g>
+  </g>
+</svg>

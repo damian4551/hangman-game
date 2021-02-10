@@ -1,0 +1,628 @@
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Patrick Hand', cursive;
+  text-transform: uppercase;
+  color: #000;
+}
+
+body {
+  background-color: #FCFAFA;
+}
+
+.wrapper {
+  padding: 40px;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    padding: 70px 100px;
+  }
+}
+
+@media (min-width: 1680px) {
+  .wrapper {
+    padding: 100px 150px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper .game-area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+}
+
+.wrapper .game-area .hangman {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 1024px) {
+  .wrapper .game-area .hangman {
+    width: 50%;
+    margin: 0;
+  }
+}
+
+.wrapper .game-area .hangman svg {
+  max-width: 50%;
+  height: auto;
+}
+
+@media (min-width: 540px) {
+  .wrapper .game-area .hangman svg {
+    max-width: 30%;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper .game-area .hangman svg {
+    max-width: 40%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper .game-area .hangman svg {
+    width: 200px;
+  }
+}
+
+@media (min-width: 1680px) {
+  .wrapper .game-area .hangman svg {
+    width: 320px;
+  }
+}
+
+.wrapper .game-area .hangman svg .body-part {
+  opacity: 0;
+}
+
+.wrapper .game-area .wrong-letters {
+  margin-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+  .wrapper .game-area .wrong-letters {
+    margin-bottom: 80px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper .game-area .wrong-letters {
+    width: 50%;
+    margin: 0;
+  }
+}
+
+.wrapper .game-area .wrong-letters .letters-list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.wrapper .game-area .wrong-letters .letters-list .wrong-letter {
+  color: #D00909;
+  text-decoration: line-through;
+  font-size: 2em;
+  margin-right: 0.5em;
+}
+
+@media (min-width: 768px) {
+  .wrapper .game-area .wrong-letters .letters-list .wrong-letter {
+    font-size: 2.25em;
+  }
+}
+
+@media (min-width: 1336px) {
+  .wrapper .game-area .wrong-letters .letters-list .wrong-letter {
+    font-size: 2.5em;
+  }
+}
+
+@media (min-width: 1680px) {
+  .wrapper .game-area .wrong-letters .letters-list .wrong-letter {
+    font-size: 2.75em;
+  }
+}
+
+.wrapper .game-area .wrong-letters .letters-list .wrong-letter:last-of-type {
+  margin: 0;
+}
+
+.wrapper .word {
+  margin-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+  .wrapper .word {
+    margin-bottom: 80px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper .word {
+    margin: 0;
+  }
+}
+
+.wrapper .word .word-list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.wrapper .word .word-list .word-letter {
+  position: relative;
+  font-size: 2em;
+  padding: 0.2em 0.5em;
+  margin-right: 0.5em;
+  margin-bottom: 1em;
+}
+
+@media (min-width: 768px) {
+  .wrapper .word .word-list .word-letter {
+    font-size: 2.25em;
+  }
+}
+
+@media (min-width: 1336px) {
+  .wrapper .word .word-list .word-letter {
+    font-size: 2.5em;
+  }
+}
+
+@media (min-width: 1680px) {
+  .wrapper .word .word-list .word-letter {
+    font-size: 2.75em;
+  }
+}
+
+.wrapper .word .word-list .word-letter:nth-of-type(2n):after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  border-radius: 20px;
+  -webkit-transform: rotate(2deg);
+          transform: rotate(2deg);
+}
+
+.wrapper .word .word-list .word-letter:nth-of-type(2n+1):after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  border-radius: 20px;
+  -webkit-transform: rotate(-1deg);
+          transform: rotate(-1deg);
+}
+
+.wrapper .word .word-list .word-letter:nth-of-type(3n):after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  border-radius: 20px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.wrapper .screen-keyboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .wrapper .screen-keyboard {
+    opacity: 1;
+  }
+}
+
+.wrapper .screen-keyboard h4 {
+  text-align: center;
+  font-size: 2em;
+}
+
+@media (min-width: 768px) {
+  .wrapper .screen-keyboard h4 {
+    font-size: 2.25em;
+  }
+}
+
+@media (min-width: 1336px) {
+  .wrapper .screen-keyboard h4 {
+    font-size: 2.5em;
+  }
+}
+
+@media (min-width: 1680px) {
+  .wrapper .screen-keyboard h4 {
+    font-size: 2.75em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper .screen-keyboard h4 {
+    display: none;
+  }
+}
+
+.wrapper .screen-keyboard .alphabet-list {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.wrapper .screen-keyboard .alphabet-list .alphabet-letter {
+  position: relative;
+  font-size: 1.75em;
+  padding: 0.2em 0.5em;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .wrapper .screen-keyboard .alphabet-list .alphabet-letter {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 1336px) {
+  .wrapper .screen-keyboard .alphabet-list .alphabet-letter {
+    font-size: 2.25em;
+  }
+}
+
+@media (min-width: 1680px) {
+  .wrapper .screen-keyboard .alphabet-list .alphabet-letter {
+    font-size: 2.5em;
+  }
+}
+
+.wrapper .screen-keyboard .alphabet-list .alphabet-letter:hover:nth-of-type(2n):after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  border-radius: 20px;
+  -webkit-transform: rotate(2deg);
+          transform: rotate(2deg);
+}
+
+.wrapper .screen-keyboard .alphabet-list .alphabet-letter:hover:nth-of-type(2n+1):after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  border-radius: 20px;
+  -webkit-transform: rotate(-1deg);
+          transform: rotate(-1deg);
+}
+
+.wrapper .screen-keyboard .alphabet-list .alphabet-letter:hover:nth-of-type(3n):after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  border-radius: 20px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.wrapper .toggle-keyboard {
+  display: none;
+  position: absolute;
+  bottom: 3%;
+  right: 3%;
+  font-size: 1.5em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+@media (min-width: 1024px) {
+  .wrapper .toggle-keyboard {
+    display: block;
+  }
+}
+
+.wrapper .game-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  background-color: #FCFAFA;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .game-info .line-1 {
+  font-size: 4em;
+}
+
+@media (min-width: 768px) {
+  .wrapper .game-info .line-1 {
+    font-size: 6em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper .game-info .line-1 {
+    font-size: 7em;
+  }
+}
+
+@media (min-width: 1336px) {
+  .wrapper .game-info .line-1 {
+    font-size: 8em;
+  }
+}
+
+@media (min-width: 1680px) {
+  .wrapper .game-info .line-1 {
+    font-size: 9em;
+  }
+}
+
+.wrapper .game-info .line-2 {
+  font-size: 1.5em;
+}
+
+@media (min-width: 768px) {
+  .wrapper .game-info .line-2 {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper .game-info .line-2 {
+    font-size: 2.25em;
+  }
+}
+
+@media (min-width: 1336px) {
+  .wrapper .game-info .line-2 {
+    font-size: 2.5em;
+  }
+}
+
+@media (min-width: 1680px) {
+  .wrapper .game-info .line-2 {
+    font-size: 2.75em;
+  }
+}
+
+.wrapper .form-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  background-color: #FCFAFA;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 1.5em;
+  padding: 40px;
+}
+
+@media (min-width: 768px) {
+  .wrapper .form-layer {
+    font-size: 2em;
+    padding: 70px 100px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper .form-layer {
+    font-size: 2.25em;
+  }
+}
+
+@media (min-width: 1336px) {
+  .wrapper .form-layer {
+    font-size: 2.5em;
+  }
+}
+
+@media (min-width: 1680px) {
+  .wrapper .form-layer {
+    font-size: 2.75em;
+    padding: 100px 150px;
+  }
+}
+
+.wrapper .form-layer .info-text {
+  margin-bottom: 80px;
+}
+
+.wrapper .form-layer .input {
+  border: none;
+  background-color: transparent;
+  font-size: 1em;
+  text-align: center;
+  outline: none;
+  margin-bottom: 30px;
+}
+
+.wrapper .form-layer .input::-webkit-input-placeholder {
+  color: #000;
+  font-size: 1em;
+}
+
+.wrapper .form-layer .input:-ms-input-placeholder {
+  color: #000;
+  font-size: 1em;
+}
+
+.wrapper .form-layer .input::-ms-input-placeholder {
+  color: #000;
+  font-size: 1em;
+}
+
+.wrapper .form-layer .input::placeholder {
+  color: #000;
+  font-size: 1em;
+}
+
+.wrapper .form-layer .start-btn {
+  border: none;
+  background-color: transparent;
+  font-size: 1.5em;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+}
+
+.wrapper .countdown-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  background-color: #FCFAFA;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .countdown-layer .counter {
+  font-size: 4em;
+}
+
+@media (min-width: 768px) {
+  .wrapper .countdown-layer .counter {
+    font-size: 6em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper .countdown-layer .counter {
+    font-size: 7em;
+  }
+}
+
+@media (min-width: 1336px) {
+  .wrapper .countdown-layer .counter {
+    font-size: 8em;
+  }
+}
+
+@media (min-width: 1680px) {
+  .wrapper .countdown-layer .counter {
+    font-size: 9em;
+  }
+}
+/*# sourceMappingURL=game.css.map */

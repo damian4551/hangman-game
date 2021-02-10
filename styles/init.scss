@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+
+//colors
+$black: #000;
+$background: #FCFAFA;
+$red: #D00909;
+
+//breakpoints
+$stab: "540px";
+$tab: "768px";
+$sdesk: "1024px";
+$mdesk: "1336px";
+$ldesk: "1680px";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Patrick Hand', cursive;
+    text-transform: uppercase;
+    color: $black;
+}
+
+body {
+    background-color: $background;
+}

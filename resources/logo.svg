@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="796" height="247" viewBox="0 0 796 247">
+  <g id="Group_1" data-name="Group 1" transform="translate(-562 -95)">
+    <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(1198 95)" fill="none" stroke="#000" stroke-width="7">
+      <ellipse cx="80" cy="57.5" rx="80" ry="57.5" stroke="none"/>
+      <ellipse cx="80" cy="57.5" rx="76.5" ry="54" fill="none"/>
+    </g>
+    <text id="X" transform="translate(1238 122) rotate(90)" font-size="40" font-family="PatrickHand-Regular, Patrick Hand"><tspan x="0" y="0">X</tspan></text>
+    <text id="X-2" data-name="X" transform="translate(1286 125) rotate(90)" font-size="48" font-family="PatrickHand-Regular, Patrick Hand"><tspan x="0" y="0">X</tspan></text>
+    <text id="THE_HANGMAN" data-name="THE HANGMAN" transform="translate(562 298)" font-size="140" font-family="PatrickHand-Regular, Patrick Hand"><tspan x="0" y="0">THE HANGMAN</tspan></text>
+  </g>
+</svg>
