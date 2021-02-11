@@ -11,6 +11,8 @@ const gameInfo = document.querySelector('.line-1');
 const countdownCounter = document.querySelector('.counter');
 const countdownLayer = document.querySelector('.countdown-layer');
 
+const wordSpan = document.querySelector('.word');
+
 let isGame = true;
 let counter = 0;
 
@@ -62,11 +64,11 @@ const letterPositions = (word, key) => {
     return positionsArray;
 }
 
-const drawBody = () => {
+const drawBody = (word) => {
     if(counter === 5) {
         bodyParts[counter].style.opacity = "1";
         isGame = false;
-        finishGame("lost");
+        finishGame("lost", word);
     } else {
         bodyParts[counter].style.opacity = "1";
         counter++;
@@ -78,7 +80,7 @@ const writeLetters = (word, key) => {
 
     if(positionsArray.length === 0) {
         const wrongLetter = document.createElement('li');
-        drawBody();
+        drawBody(word);
         wrongLetter.classList.add('wrong-letter');
         wrongLetter.innerText = key;
         wrongLetters.appendChild(wrongLetter);
@@ -88,7 +90,7 @@ const writeLetters = (word, key) => {
             wordLetters[positionsArray[i]].innerText = key;
         }
         checkStatusGame(wordLetters);
-        finishGame("win");
+        finishGame("win", word);
     }
 
 }
@@ -109,7 +111,7 @@ const checkStatusGame = (wordLetters) => {
     }
 }
 
-const finishGame = (status) => {
+const finishGame = (status, word) => {
     if(!isGame) {
         if(status === "win") {
             gameInfoBlock.style.display = "flex";
@@ -120,6 +122,7 @@ const finishGame = (status) => {
             gameInfo.innerText = "you lost :(";
             document.body.style.overflow = "hidden";
         }
+        wordSpan.innerText = `${word} was the word to guess`;
     }
 }
 
